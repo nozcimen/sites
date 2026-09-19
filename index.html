@@ -7,12 +7,12 @@
   <title>MAKROEKONOMİ | RUSYA — Bülten 08-2026</title>
   <style>
     :root {
-      --paper: #FFF9F0;
-      --ink: #4B4B4B;
-      --clay: #B85C38;
-      --sage-paper: #F2F0E1;
-      --peach-paper: #F3DFCE;
-      --rule: rgba(75, 75, 75, 0.38);
+      --paper: #FFF3F6;
+      --ink: #4A3B40;
+      --clay: #9E3D62;
+      --sage-paper: #F5E3E9;
+      --peach-paper: #EFCFD9;
+      --rule: rgba(74, 59, 64, 0.38);
       --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
     }
 
@@ -142,14 +142,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: sepia(18%) saturate(78%) contrast(94%);
+      filter: grayscale(18%) sepia(14%) hue-rotate(286deg) saturate(78%) contrast(94%);
     }
 
     .hero-figure::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(75, 75, 75, 0.72), transparent 38%);
+      background: linear-gradient(to top, rgba(74, 59, 64, 0.76), transparent 38%);
       pointer-events: none;
     }
 
@@ -316,14 +316,14 @@
       min-height: 660px;
       margin: 0;
       overflow: hidden;
-      border-right: 1px solid rgba(255, 249, 240, 0.55);
+      border-right: 1px solid rgba(255, 243, 246, 0.55);
     }
 
     .lens-figure img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(42%) sepia(20%);
+      filter: grayscale(40%) sepia(12%) hue-rotate(286deg) saturate(72%);
       mix-blend-mode: multiply;
       opacity: 0.86;
     }
@@ -368,16 +368,16 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       margin: 0;
-      border-top: 1px solid rgba(255, 249, 240, 0.55);
+      border-top: 1px solid rgba(255, 243, 246, 0.55);
     }
 
     .lens-fact {
       padding: 18px 18px 20px 0;
-      border-bottom: 1px solid rgba(255, 249, 240, 0.55);
+      border-bottom: 1px solid rgba(255, 243, 246, 0.55);
     }
 
     .lens-fact:nth-child(odd) {
-      border-right: 1px solid rgba(255, 249, 240, 0.55);
+      border-right: 1px solid rgba(255, 243, 246, 0.55);
     }
 
     .lens-fact:nth-child(even) {
@@ -489,7 +489,7 @@
       width: 100%;
       aspect-ratio: 1;
       object-fit: cover;
-      filter: sepia(32%) saturate(68%);
+      filter: grayscale(22%) sepia(18%) hue-rotate(286deg) saturate(62%);
       border-radius: 50%;
     }
 
@@ -645,7 +645,7 @@
       .lens-figure {
         min-height: 460px;
         border-right: 0;
-        border-bottom: 1px solid rgba(255, 249, 240, 0.55);
+        border-bottom: 1px solid rgba(255, 243, 246, 0.55);
       }
 
       .coin-figure {
