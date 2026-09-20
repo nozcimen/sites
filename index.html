@@ -81,6 +81,109 @@
       color: var(--clay);
     }
 
+    .issue-nav-shell {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      background: rgba(255, 243, 246, 0.96);
+      border-bottom: 1px solid var(--ink);
+      backdrop-filter: blur(12px);
+    }
+
+    .issue-nav {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .issue-tab {
+      display: flex;
+      min-width: 0;
+      min-height: 76px;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 22px;
+      border-right: 1px solid var(--rule);
+      text-decoration: none;
+    }
+
+    .issue-tab:last-child {
+      border-right: 0;
+    }
+
+    .issue-tab:hover,
+    .issue-tab[aria-current="page"] {
+      color: var(--paper);
+      background: var(--clay);
+    }
+
+    .issue-tab-number {
+      flex: 0 0 auto;
+      font-size: 1.9rem;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .issue-tab-copy {
+      min-width: 0;
+      line-height: 1.15;
+    }
+
+    .issue-tab-copy strong,
+    .issue-tab-copy span {
+      display: block;
+    }
+
+    .issue-tab-copy strong {
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .issue-tab-copy span {
+      margin-top: 4px;
+      overflow: hidden;
+      font-size: 0.7rem;
+      font-style: italic;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .issue-page[hidden] {
+      display: none;
+    }
+
+    .page-intro {
+      display: grid;
+      grid-template-columns: 0.36fr 1fr;
+      gap: clamp(36px, 8vw, 110px);
+      align-items: end;
+      padding: clamp(74px, 9vw, 122px) 0 48px;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .page-index {
+      margin: 0;
+      color: var(--clay);
+      font-size: clamp(5rem, 11vw, 10rem);
+      font-style: italic;
+      line-height: 0.72;
+      letter-spacing: -0.07em;
+    }
+
+    .page-intro h2 {
+      max-width: 14ch;
+      margin: 0 0 22px;
+      font-size: clamp(3rem, 6.5vw, 6.4rem);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+    }
+
+    .page-intro p:last-child {
+      max-width: 64ch;
+      margin: 0;
+      font-size: 1.12rem;
+    }
+
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.92fr);
@@ -530,6 +633,141 @@
       font-style: normal;
     }
 
+    .editorial-band {
+      padding: clamp(64px, 8vw, 102px) 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .editorial-band.tint {
+      background: var(--sage-paper);
+    }
+
+    .band-title {
+      max-width: 18ch;
+      margin: 0 0 42px;
+      font-size: clamp(2.5rem, 5vw, 4.8rem);
+      font-weight: 400;
+      line-height: 0.96;
+      letter-spacing: -0.045em;
+    }
+
+    .signal-grid,
+    .brief-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--ink);
+      border-left: 1px solid var(--ink);
+    }
+
+    .signal-column,
+    .brief-card {
+      padding: 32px;
+      border-right: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .signal-column:first-child {
+      background: var(--paper);
+    }
+
+    .signal-column:last-child {
+      background: var(--peach-paper);
+    }
+
+    .signal-column h3,
+    .brief-card h3,
+    .practical-item h3 {
+      margin: 0 0 18px;
+      color: var(--clay);
+      font-size: 1.24rem;
+      font-weight: 600;
+    }
+
+    .signal-column ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .signal-column li {
+      padding: 13px 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .signal-column li:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .brief-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .brief-card p {
+      margin: 0;
+    }
+
+    .figure-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 48px;
+      border-top: 1px solid var(--ink);
+      border-left: 1px solid var(--ink);
+    }
+
+    .figure-strip div {
+      min-height: 154px;
+      padding: 22px;
+      border-right: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .figure-strip strong,
+    .figure-strip span {
+      display: block;
+    }
+
+    .figure-strip strong {
+      color: var(--clay);
+      font-size: clamp(1.75rem, 3.2vw, 3.3rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .figure-strip span {
+      margin-top: 14px;
+      font-size: 0.84rem;
+      line-height: 1.3;
+    }
+
+    .practical-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--ink);
+    }
+
+    .practical-item {
+      min-height: 250px;
+      padding: 30px 34px 32px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .practical-item:nth-child(odd) {
+      border-right: 1px solid var(--rule);
+    }
+
+    .practical-item:nth-child(even) {
+      padding-right: 0;
+      padding-left: 34px;
+    }
+
+    .practical-item p {
+      max-width: 55ch;
+      margin: 0;
+    }
+
     .subscribe {
       display: grid;
       grid-template-columns: 1.35fr auto;
@@ -638,8 +876,13 @@
       }
 
       .lens-layout,
-      .debt-layout {
+      .debt-layout,
+      .brief-grid {
         grid-template-columns: 1fr;
+      }
+
+      .figure-strip {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .lens-figure {
@@ -669,6 +912,52 @@
       .masthead {
         grid-template-columns: 1fr auto;
         min-height: 78px;
+      }
+
+      .issue-nav {
+        display: flex;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: thin;
+      }
+
+      .issue-tab {
+        flex: 0 0 175px;
+        min-height: 66px;
+        padding: 10px 14px;
+      }
+
+      .issue-tab-number {
+        font-size: 1.55rem;
+      }
+
+      .page-intro,
+      .signal-grid,
+      .practical-list {
+        grid-template-columns: 1fr;
+      }
+
+      .page-intro {
+        gap: 34px;
+      }
+
+      .page-index {
+        font-size: 5.8rem;
+      }
+
+      .signal-column:first-child,
+      .practical-item:nth-child(odd) {
+        border-right: 0;
+      }
+
+      .practical-item,
+      .practical-item:nth-child(even) {
+        min-height: 0;
+        padding: 26px 0;
+      }
+
+      .figure-strip {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .issue {
@@ -781,7 +1070,29 @@
     <a class="masthead-link" href="#abonelik">Abonelik</a>
   </header>
 
+  <div class="issue-nav-shell">
+    <nav class="page issue-nav" aria-label="Bülten sayfaları">
+      <a class="issue-tab" href="#sayfa-1" data-page-link="sayfa-1">
+        <span class="issue-tab-number">1</span>
+        <span class="issue-tab-copy"><strong>Görünüm</strong><span>İyimser / kötümser</span></span>
+      </a>
+      <a class="issue-tab" href="#sayfa-2" data-page-link="sayfa-2">
+        <span class="issue-tab-number">2</span>
+        <span class="issue-tab-copy"><strong>Grafikler</strong><span>Piyasalar / pratik köşe</span></span>
+      </a>
+      <a class="issue-tab" href="#sayfa-3" data-page-link="sayfa-3">
+        <span class="issue-tab-number">3</span>
+        <span class="issue-tab-copy"><strong>Rafineri</strong><span>Mercek dosyası</span></span>
+      </a>
+      <a class="issue-tab" href="#sayfa-4" data-page-link="sayfa-4">
+        <span class="issue-tab-number">4</span>
+        <span class="issue-tab-copy"><strong>Genel / Borç</strong><span>Yatırım / bütçe</span></span>
+      </a>
+    </nav>
+  </div>
+
   <main>
+    <article class="issue-page" id="sayfa-1" data-issue-page>
     <section class="page hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <div>
@@ -869,6 +1180,74 @@
       <p class="source-note">Kaynak: MonDef, Bülten 08-2026, s. 1 ve s. 4.</p>
     </section>
 
+    <section class="editorial-band tint" aria-labelledby="signals-title">
+      <div class="page">
+        <h2 class="band-title" id="signals-title">Aynı ekonomiden iki ayrı sinyal.</h2>
+        <div class="signal-grid">
+          <article class="signal-column">
+            <h3>İyimser okuma</h3>
+            <ul>
+              <li>İkinci çeyrek GSYH büyümesi +%1,3 ile beklentiyi aştı.</li>
+              <li>Gıda dışı perakende +%10,1; tüketim harcamaları +%6,1 arttı.</li>
+              <li>Ural petrolü 100 doların üzerine çıktı; ihracat gelirine destek verdi.</li>
+              <li>Reel ücretler ilk çeyrekte +%8,7, ikinci çeyrekte +%4,4 yükseldi.</li>
+              <li>Metalurji haziran ve temmuzda aylık +%0,8 büyüdü.</li>
+            </ul>
+          </article>
+          <article class="signal-column">
+            <h3>Kötümser okuma</h3>
+            <ul>
+              <li>Ocak–Ağustos bütçe açığı 5,8 trilyon rubleye ulaştı.</li>
+              <li>Sabit sermaye yatırımları ilk çeyrekte −%14,3, ikinci çeyrekte −%6,6 daraldı.</li>
+              <li>İmalat PMI 48,8'e indi; üç ayın ilk daralma sinyalini verdi.</li>
+              <li>Sanayi üretimi ilk yedi ayda yalnızca +%0,1 arttı.</li>
+              <li>Reel sektör kredi ve tahvil borcu 100 trilyon rubleye çıktı.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="source-note">Kaynak: MonDef, Bülten 08-2026, “İyimser / Kötümser”, s. 1.</p>
+      </div>
+    </section>
+
+    <section class="page section" aria-labelledby="agenda-title">
+      <div class="section-head">
+        <h2 class="section-title" id="agenda-title">Piyasa ve kulis gündemi</h2>
+        <p>Vergi paketi ihtimali, Batılı markaların dönüş hazırlıkları ve açıklanmayan özelleştirme listesi bu ayın şirket kararlarını etkileyen başlıkları arasında.</p>
+      </div>
+      <div class="brief-grid">
+        <article class="brief-card">
+          <h3>Vergi paketi</h3>
+          <p>Yeni KDV artışına düşük ihtimal veriliyor; borç piyasasındaki sıkışma nedeniyle alternatif gelir kalemleri tartışılıyor.</p>
+        </article>
+        <article class="brief-card">
+          <h3>Markaların dönüşü</h3>
+          <p>Marka tescilleri yenilenirken şirketler mevzuat, AVM kapasitesi ve güçlenen yerli rekabeti değerlendiriyor.</p>
+        </article>
+        <article class="brief-card">
+          <h3>Özelleştirme</h3>
+          <p>Maliye yedi büyük şirket hissesi için öneri sundu; şirket isimleri henüz açıklanmadı.</p>
+        </article>
+      </div>
+      <div class="figure-strip" aria-label="Bu ayın çarpıcı rakamları">
+        <div><strong>+%236</strong><span>Kimya sanayii borç artışı</span></div>
+        <div><strong>%9,0</strong><span>İlk çeyrek bütçe açığı / GSYH</span></div>
+        <div><strong>100 trln ₽</strong><span>Reel sektör kredi ve tahvil borcu</span></div>
+        <div><strong>+%24,6</strong><span>Benzin fiyatının yıl başından artışı</span></div>
+        <div><strong>1 mn varil</strong><span>Temmuz sonundan beri deniz yoluyla gelen benzin</span></div>
+      </div>
+      <p class="source-note">Kaynak: MonDef, Bülten 08-2026, “Piyasada ve Kuliste Konuşulanlar” ve “Bu Ayın Çarpıcı Rakamları”, s. 1.</p>
+    </section>
+    </article>
+
+    <article class="issue-page" id="sayfa-2" data-issue-page>
+    <header class="page page-intro">
+      <p class="page-index">2/4</p>
+      <div>
+        <h2>Grafikler konuşsun.</h2>
+        <p>Faiz, enflasyon, enerji, kur ve emtia göstergelerini aynı piyasa panosunda okuyun; ardından göstergenin ne söylediğini pratik notlarla sınayın.</p>
+      </div>
+    </header>
+
     <section class="page section" aria-labelledby="markets-title">
       <div class="section-head">
         <h2 class="section-title" id="markets-title">Enerji ve kur panosu</h2>
@@ -886,6 +1265,41 @@
       </dl>
       <p class="source-note">Not: Son değer milyon varil/gün cinsinden Ağustos rafinaj hacmidir. Kaynak: MonDef, Bülten 08-2026, s. 2–3.</p>
     </section>
+
+    <section class="editorial-band tint" aria-labelledby="practical-title">
+      <div class="page">
+        <h2 class="band-title" id="practical-title">Pratik köşe</h2>
+        <div class="practical-list">
+          <article class="practical-item">
+            <h3>PMI nasıl okunur?</h3>
+            <p>50 değişim olmadığını, üzeri genişlemeyi, altı daralmayı gösterir. 48,8 üretimin %1,2 düştüğü anlamına gelmez; düşüş bildirenlerin artış bildirenlerden fazla olduğunu anlatır.</p>
+          </article>
+          <article class="practical-item">
+            <h3>Mevsimsellikten arındırma</h3>
+            <p>Meyve fiyatları veya yıl sonu perakendesi gibi düzenli tekrarlar matematiksel olarak çıkarılır. Bu nedenle aylık +%0,1 ile yıllık +%0,4 aynı anda doğru olabilir.</p>
+          </article>
+          <article class="practical-item">
+            <h3>Petrolün farklı fiyatları</h3>
+            <p>Spot fiyat, vergi fiyatı, kontrat fiyatı ve bütçe varsayımı aynı amaçla kullanılmaz. Ural petrolündeki 104,6 dolar ile 67,1 dolar farkı bu tanım ayrımından kaynaklanır.</p>
+          </article>
+          <article class="practical-item">
+            <h3>Reel faiz</h3>
+            <p>Bültendeki hesap, %14,5 nominal faizden %6,6 enflasyonu çıkararak yaklaşık %7,9 reel faize ulaşıyor; yatırım kararlarını baskılayan ana kanal bu.</p>
+          </article>
+        </div>
+        <p class="source-note">Kaynak: MonDef, Bülten 08-2026, “Pratik Köşe”, s. 2.</p>
+      </div>
+    </section>
+    </article>
+
+    <article class="issue-page" id="sayfa-3" data-issue-page>
+    <header class="page page-intro">
+      <p class="page-index">3/4</p>
+      <div>
+        <h2>Rafineri dosyası.</h2>
+        <p>Yakıt arzındaki kırılmayı haber akışı olarak değil, rafineriden Türk işletmesine uzanan bir tedarik zinciri sorusu olarak ele alan bu ayın MERCEK çalışması.</p>
+      </div>
+    </header>
 
     <section class="lens" aria-labelledby="lens-title">
       <div class="page lens-layout">
@@ -972,6 +1386,52 @@
       </div>
       <p class="source-note">Kaynak: MonDef, Bülten 08-2026, “Sektör sektör”, s. 3.</p>
     </section>
+    </article>
+
+    <article class="issue-page" id="sayfa-4" data-issue-page>
+    <header class="page page-intro">
+      <p class="page-index">4/4</p>
+      <div>
+        <h2>Yatırım, bütçe ve borç.</h2>
+        <p>Hane halkı harcamaya devam ederken şirketlerin neden yatırım yapmadığını; kamu, şirket ve hane borçlarının birbirinden farklı risk kanallarını birlikte okuyun.</p>
+      </div>
+    </header>
+
+    <section class="page section" aria-labelledby="investment-title">
+      <div class="section-head">
+        <h2 class="section-title" id="investment-title">Tüketim ile yatırım arasındaki makas</h2>
+        <p>Sabit sermaye yatırımları daralırken gıda dışı perakende ve tüketim harcamaları büyüdü. Talebe dönük işler canlı; yatırım malı ve uzun geri ödemeli projeler baskı altında.</p>
+      </div>
+      <div class="figure-strip" aria-label="Yatırım ve tüketim göstergeleri">
+        <div><strong>−%14,3</strong><span>Sabit sermaye yatırımları, ilk çeyrek</span></div>
+        <div><strong>−%6,6</strong><span>Sabit sermaye yatırımları, ikinci çeyrek</span></div>
+        <div><strong>−%10,0</strong><span>İnşaat yatırımları, ilk çeyrek</span></div>
+        <div><strong>+%10,1</strong><span>Gıda dışı perakende, ikinci çeyrek</span></div>
+        <div><strong>+%6,1</strong><span>Tüketim harcamaları, ikinci çeyrek</span></div>
+      </div>
+      <p class="source-note">Kaynak: MonDef, Bülten 08-2026, “Yatırım ile tüketim arasındaki makas”, s. 4.</p>
+    </section>
+
+    <section class="editorial-band tint" aria-labelledby="budget-title">
+      <div class="page">
+        <h2 class="band-title" id="budget-title">Yıllık bütçe planı sekiz ayda aşıldı.</h2>
+        <div class="brief-grid">
+          <article class="brief-card">
+            <h3>Açık</h3>
+            <p>Ocak–Ağustos açığı 5,8 trilyon rubleye, GSYH'nin %2,5'ine ulaştı. Yıllık hedef 3,786 trilyon rubleydi.</p>
+          </article>
+          <article class="brief-card">
+            <h3>Gelir ve gider</h3>
+            <p>Gelirler +%9,2 ile 25,9 trilyon rubleye; harcamalar +%14,7 ile 31,7 trilyon rubleye çıktı.</p>
+          </article>
+          <article class="brief-card">
+            <h3>İşletme etkisi</h3>
+            <p>Kamu ihalesine ve devlet ödemesine bağlı işlerde tahsilat süresinin uzaması temel operasyonel risk.</p>
+          </article>
+        </div>
+        <p class="source-note">Kaynak: MonDef, Bülten 08-2026, “Bütçe: yıllık planı sekiz ayda aştı”, s. 4.</p>
+      </div>
+    </section>
 
     <section class="debt">
       <div class="page section debt-layout">
@@ -994,8 +1454,8 @@
               <tbody>
                 <tr>
                   <th scope="row">Devlet borcu / GSYH</th>
-                  <td>%18,6 · 2025</td>
-                  <td>%23,1 · 31 Mart 2026</td>
+                  <td>%19,1 · IMF WEO Nisan 2026</td>
+                  <td>%25,5 · IMF WEO Nisan 2026</td>
                 </tr>
                 <tr>
                   <th scope="row">Şirket borcu / GSYH</th>
@@ -1022,6 +1482,7 @@
       </div>
       <p class="source-note">Kaynak: MonDef, Bülten 08-2026, “Küresel not”, s. 4.</p>
     </section>
+    </article>
 
     <section class="page subscribe" id="abonelik" aria-labelledby="subscribe-title">
       <div>
@@ -1041,5 +1502,47 @@
     <p class="footer-brand">MonDef</p>
     <span>MAKROEKONOMİ | RUSYA · Bülten 08-2026</span>
   </footer>
+
+  <script>
+    (() => {
+      const pages = [...document.querySelectorAll('[data-issue-page]')];
+      const links = [...document.querySelectorAll('[data-page-link]')];
+      const validIds = new Set(pages.map((page) => page.id));
+
+      function showPage(id, updateHistory = false) {
+        const targetId = validIds.has(id) ? id : 'sayfa-1';
+
+        pages.forEach((page) => {
+          page.hidden = page.id !== targetId;
+        });
+
+        links.forEach((link) => {
+          if (link.dataset.pageLink === targetId) {
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+
+        if (updateHistory) {
+          history.pushState(null, '', `#${targetId}`);
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+      }
+
+      links.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          showPage(link.dataset.pageLink, true);
+        });
+      });
+
+      window.addEventListener('popstate', () => {
+        showPage(location.hash.slice(1));
+      });
+
+      showPage(location.hash.slice(1));
+    })();
+  </script>
 </body>
 </html>
