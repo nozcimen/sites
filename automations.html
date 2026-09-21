@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OpenClaw Automations</title>
+<style>
+  :root{--bg:#FFF9F0;--ink:#4B4B4B;--accent:#B85C38;--rule:#E8DCCB}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 20px 72px}
+  h1{font-size:1.9rem;line-height:1.2;margin:0 0 .2em;color:var(--accent);letter-spacing:-.01em}
+  .lede{font-size:1.05rem;margin:0 0 2.2em}
+  h2{font-size:1.1rem;margin:2.2em 0 .6em;color:var(--accent)}
+  ul{padding-left:1.2em;margin:.6em 0}
+  li{margin:.35em 0}
+  a{color:var(--accent)}
+  .note{border-left:3px solid var(--rule);padding:.1em 0 .1em 1em;margin:1.6em 0}
+  footer{margin-top:3em;padding-top:1.4em;border-top:1px solid var(--rule);font-size:.9rem}
+  @media (max-width:420px){.wrap{padding:36px 18px 56px}h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>OpenClaw Automations</h1>
+<p class="lede">A private, single-user automation setup that connects Google Workspace services to a
+self-hosted <a href="https://n8n.io">n8n</a> instance and an OpenClaw assistant.</p>
+
+<h2>What it does</h2>
+<p>OpenClaw Automations is a personal tool. It is operated by one person, for that person's own
+accounts. There is no public sign-up, no shared service and no other users.</p>
+<ul>
+  <li><strong>Google Calendar</strong> — read and create events from automated workflows.</li>
+  <li><strong>Google Drive</strong> — create and organise files and folders produced by workflows.</li>
+  <li><strong>Google Sheets</strong> — read and append rows used as workflow input and output.</li>
+  <li><strong>Gmail</strong> — read and send messages on behalf of the account owner.</li>
+</ul>
+
+<h2>How it runs</h2>
+<p>Workflows run on a private server controlled by the account owner. Access to the workflow
+interface is protected by HTTP authentication and two-factor authentication, and all traffic uses
+HTTPS. OAuth tokens are stored encrypted on that server and are never shared.</p>
+
+<div class="note">
+  This application is not distributed, sold or offered to third parties. It exists only to automate
+  the operator's own work.
+</div>
+
+<h2>Documents</h2>
+<ul>
+  <li><a href="/privacy.html">Privacy Policy</a></li>
+  <li><a href="/terms.html">Terms of Service</a></li>
+</ul>
+
+<footer>
+  Operated by Nejat Ozcimen · <a href="mailto:nozcimen@gmail.com">nozcimen@gmail.com</a><br>
+  <a href="/">Back to nozcimen.com</a>
+</footer>
+
+</div>
+</body>
+</html>
